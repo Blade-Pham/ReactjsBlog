@@ -1,0 +1,22 @@
+.headline {
+    display: flex;
+    justify-content: space-between; /* Căn title và button về 2 phía */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.headline h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.btn-viewmore {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
