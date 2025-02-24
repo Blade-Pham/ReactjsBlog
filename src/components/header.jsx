@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import "../assets/styles/header.css";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/newlogo.png";
 
 const Header = () => {
@@ -9,14 +10,15 @@ const Header = () => {
     return (
         <nav className="navbar">
       <div className="container">
+        
         <img src={logo} alt="Logo" className="logo" />
         
         {/* Desktop Menu */}
         <ul className="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Member</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/list-members">Member</Link></li>
+        <li><Link to="/">News</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -28,10 +30,10 @@ const Header = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className={`mobile-menu ${isOpen ? "open" : ""}`}>
-          <li><a href="#" onClick={() => setIsOpen(false)}>Home</a></li>
-          <li><a href="#" onClick={() => setIsOpen(false)}>About</a></li>
-          <li><a href="#" onClick={() => setIsOpen(false)}>Services</a></li>
-          <li><a href="#" onClick={() => setIsOpen(false)}>Contact</a></li>
+          <li><Link to="/" >Home</Link></li>
+        <li><Link to="/list-members">Member</Link></li>
+        <li><Link to="/list-news">News</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
         </ul>
       )}
     </nav>

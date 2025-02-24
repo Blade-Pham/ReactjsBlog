@@ -1,0 +1,20 @@
+.member-headline {
+    text-align: center;
+  }
+  .main-member {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    .image{
+      width: 30%;
+      aspect-ratio: 9/12;
+      object-fit: cover;
+        border-radius: 25px;
+    }
+    .user-info{
+        width: 50%;
+    }
+    .user-name{
+        text-align: center;
+    }
+  }

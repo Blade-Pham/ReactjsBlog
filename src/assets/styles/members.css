@@ -1,0 +1,28 @@
+.list-users{
+    display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  padding: 20px;
+    
+    .card-users{
+        width: 100%;
+        aspect-ratio: 16 / 14;
+        border: 1px solid rgb(42, 30, 30);
+        overflow: hidden;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .card-users:hover {
+        transform: scale(1.1);
+    }
+    .image-users{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        
+    }
+}
+@media (max-width: 1024px) {
+    .list-users {
+      grid-template-columns: repeat(2, 1fr); 
+    }}
